@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace FakeHostApp
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
+			Console.Title = ConfigurationManager.AppSettings["AppTitle"];
+			Console.SetWindowSize(30, 2);
+			Console.WriteLine("Press any key to exit...");
+			Console.ReadKey();
 		}
 	}
 }
